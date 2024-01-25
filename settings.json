@@ -1,0 +1,156 @@
+// VSCode配置Markdown和LaTex
+//===========================Markdown===========================
+{
+    "workbench.colorTheme": "One Dark Modern",
+    "code-runner.runInTerminal": true,
+    "files.autoSave": "onFocusChange",
+    "workbench.editor.enablePreview": false,
+    "markdown-preview-enhanced.previewTheme": "one-dark.css",
+    "markdown-preview-enhanced.puppeteerArgs": [
+
+    ],
+    "markdown-preview-enhanced.useGitHubStylePipedLink": false,
+    "markdown-preview-enhanced.HTML5EmbedUseImageSyntax": false,
+    "markdown-preview-enhanced.pandocArguments": [
+    
+    ],
+    "markdown-preview-enhanced.mathInlineDelimiters": [
+
+    ],
+    "markdown-preview-enhanced.mathBlockDelimiters": [
+        
+        [
+            "$$",
+            "$$"
+        ],
+        [
+            "\\[",
+            "\\]"
+        ]
+    ],
+    
+    "markdown-preview-enhanced.enableExtendedTableSyntax": true, // MPE 表格扩展功能
+    "markdown-preview-enhanced.enableScriptExecution": true, // MPE 渲染代码的运行结果功能，侧边目录栏依赖此设置
+
+
+
+//===========================LaTex===========================
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.showContextMenu": true,
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.warning.show": false,
+    "latex-workshop.hover.preview.enabled":true,
+    "latex-workshop.hover.preview.scale":0.7,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "XeLaTeX",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "PDFLaTeX",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "BibTeX",
+            "tools": [
+                "bibtex"
+            ]
+        },
+        {
+            "name": "LaTeXmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "xelatex -> bibtex -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk"
+    ],
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    "css.completion.triggerPropertyValueCompletion": false,
+    "verilog.linting.linter": "iverilog"
+}
