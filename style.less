@@ -1,0 +1,26 @@
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+.markdown-preview.markdown-preview {
+  font-family: Microsoft YaHei;
+  /* prince配置 */
+  &.prince {
+    /* PDF底部加页码 */
+    @page {
+      // size: A4 landscape; 可以用于做ppt
+      /* 设置页边距 */
+      margin-top: 1.5cm;
+      margin-right: 2.5cm; 
+      margin-bottom: 3cm;
+      margin-left: 2.5cm;
+
+      /* 设置行距 */
+      line-height: 1;
+
+      @bottom {
+        font-family: Microsoft YaHei;
+        content: counter(page) " of " counter(pages)
+      }
+    }
+  }
+}
