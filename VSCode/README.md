@@ -7,3 +7,4 @@
   - `CMake` `CMake Tools` `Code Runner`  `Include Autocomplete` `Makefile Tools`
   - `LaTeX Workshop` `Markdown Preview Mermaid Support` `Markdown Preview Enhanced` `Office Viewer(Markdown Editor)`
   - `Rainbow CSV`
+- 颜色主题：`one modern dark classic` (or `one modern dark`) 
